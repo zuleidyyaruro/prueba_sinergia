@@ -1,0 +1,78 @@
+<div class="table-container ml-05 mr-05 mt-05 pb-1" [@animate]="{value:'*',params:{y:'50px',delay:'300ms'}}">
+
+
+    <div class="mat-elevation-z8">
+        <div class="table-loading-shade" *ngIf="isLoadingResults">
+            <mat-spinner [diameter]="70" *ngIf="isLoadingResults"></mat-spinner>
+        </div>
+
+        <mat-table #table class="datatable" [dataSource]="dataSource" matSort>
+
+            <ng-container matColumnDef="tipo_identificacion_id">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo ID </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.tipo_identificacion_id}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="numero_identificacion">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> N° ID </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.numero_identificacion}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="nombre1">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Primer Nombre </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.nombre1}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="nombre2">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Segundo Nombre </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.nombre2}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="apellido1">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Primer Apellido</mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.apellido1}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="appellido2">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Segundo Apellido</mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.appellido2}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="tipo_tercero_id">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo Tercero </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.tipo_tercero_id}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="departamento_id">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Departamento </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.departamento_id}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="ciudad_id">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Ciudad </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.ciudad_id}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="tipo_contribuyente">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo Contribuyente </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.tipo_contribuyente}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="BOTONES">
+                <mat-header-cell *matHeaderCellDef> Acciones disponibles </mat-header-cell>
+                <mat-cell *matCellDef="let item">
+                    <button mat-icon-button color="primary">
+                        <mat-icon class="mat-icon-BOTONES">mode_edit</mat-icon>
+                    </button>
+                    <button mat-icon-button color="warn">
+                        <mat-icon class="mat-icon-BOTONES">delete_forever</mat-icon>
+                    </button>
+                </mat-cell>
+            </ng-container>
+
+            <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+            <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+        </mat-table>
+
+    </div>
+</div>
