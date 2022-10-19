@@ -17,6 +17,9 @@ export class DialogTercerosComponent implements OnInit {
 
   public arrayIdentificacion: any[] = [];
   public arrayTerceros: any[] = [];
+  public arrayDeptos: any[] = [];
+  public arrayMunicipios: any[] = [];
+  public arrayContribuyente: any[] = [];
 
 
   constructor(private servicio: TercerosService, private fb: FormBuilder, public dialogRef: MatDialogRef<DialogTercerosComponent>, @Inject(MAT_DIALOG_DATA) public data: any,
@@ -54,21 +57,29 @@ export class DialogTercerosComponent implements OnInit {
 
     let tipos_identificacion: any[] = [];
     let tipos_terceros: any[] = [];
+    let departamentos: any[] = [];
+    let ciudad: any[] = [];
+    let tipos_contribuyente: any[] = [];
 
     let repetidoIdentificacion: string = ''
     let repetidoTerceros: string = ''
+    let repetidoDepartamento: string = ''
+    let repetidoMunicipio: string = ''
+    let repetidoTipoContribuyente: string = ''
 
     this.servicio.viewGetTerceros().subscribe(result => {
 
       // tipos identificacion
       tipos_identificacion = result.map(item => {
-        return { tipo_identifcacion_id: item.tipo_identifcacion_id, tipo_identifacion: item.tipo_identifacion }
+        return { tipo_identificacion_id: item.tipo_identificacion_id, tipo_identificacion: item.tipo_identificacion }
       })
 
+      console.log(tipos_identificacion)
+
       for (let i = 0; i < tipos_identificacion.length; i++) {
-        if (tipos_identificacion[i].tipo_identifacion !== repetidoIdentificacion) {
-          repetidoIdentificacion = tipos_identificacion[i].tipo_identifacion;
-          this.arrayIdentificacion.push({ tipo_identifcacion_id: tipos_identificacion[i].tipo_identifcacion_id, tipo_identifacion: tipos_identificacion[i].tipo_identifacion })
+        if (tipos_identificacion[i].tipo_identificacion !== repetidoIdentificacion) {
+          repetidoIdentificacion = tipos_identificacion[i].tipo_identificacion;
+          this.arrayIdentificacion.push({ tipo_identificacion_id: tipos_identificacion[i].tipo_identificacion_id, tipo_identificacion: tipos_identificacion[i].tipo_identificacion })
         }
       }
 
@@ -83,6 +94,46 @@ export class DialogTercerosComponent implements OnInit {
           this.arrayTerceros.push({ tipo_tercero_id: tipos_terceros[i].tipo_tercero_id, tipo_tercero: tipos_terceros[i].tipo_tercero })
         }
       }
+
+      //Departamentos
+      departamentos = result.map(item => {
+        return { departamento_id: item.departamento_id, departamento: item.departamento }
+      })
+
+      for (let i = 0; i < departamentos.length; i++) {
+        if (departamentos[i].departamento !== repetidoDepartamento) {
+          repetidoDepartamento = departamentos[i].departamento;
+          this.arrayDeptos.push({ departamento_id: departamentos[i].departamento_id, departamento: departamentos[i].departamento })
+        }
+      }
+
+      //Municipios
+      ciudad = result.map(item => {
+        return { ciudad_id: item.ciudad_id, ciudad: item.ciudad }
+      })
+
+      for (let i = 0; i < ciudad.length; i++) {
+        if (ciudad[i].ciudad !== repetidoMunicipio) {
+          repetidoMunicipio = ciudad[i].ciudad;
+          this.arrayMunicipios.push({ ciudad_id: ciudad[i].ciudad_id, ciudad: ciudad[i].ciudad })
+        }
+      }
+
+      //tipos Contribuyentes
+      tipos_contribuyente = result.map(item => {
+        return { tipo_contribuyente_id: item.tipo_contribuyente_id, tipo_contribuyente: item.tipo_contribuyente }
+      })
+
+      console.log(tipos_contribuyente)
+
+      for (let i = 0; i < tipos_contribuyente.length; i++) {
+        if (tipos_contribuyente[i].tipo_contribuyente !== repetidoTipoContribuyente) {
+          repetidoTipoContribuyente = tipos_contribuyente[i].tipo_contribuyente;
+          this.arrayContribuyente.push({ tipo_contribuyente_id: tipos_contribuyente[i].tipo_contribuyente_id, tipo_contribuyente: tipos_contribuyente[i].tipo_contribuyente })
+        }
+      }
+
+      console.log(this.arrayContribuyente)
 
     }, error => console.error(error));
   }

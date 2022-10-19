@@ -6,8 +6,8 @@
             <mat-label>Tipo Identificación</mat-label>
             <mat-select formControlName="tipo_identificacion_id">
                 <mat-option *ngFor="let identificacion of arrayIdentificacion"
-                    [value]="identificacion.tipo_identifcacion_id">
-                    {{identificacion.tipo_identifacion}}
+                    [value]="identificacion.tipo_identificacion_id">
+                    {{identificacion.tipo_identificacion}}
                 </mat-option>
             </mat-select>
         </mat-form-field>
@@ -32,10 +32,6 @@
             <input matInput #filter placeholder="Segundo Apellido" formControlName="appellido2">
         </mat-form-field>
 
-        <mat-form-field fxFlex>
-            <input matInput #filter placeholder="Tipo Tercero" formControlName="tipo_tercero_id">
-        </mat-form-field>
-
         <mat-form-field appearance="fill">
             <mat-label>Tipo Tercero</mat-label>
             <mat-select formControlName="tipo_tercero_id">
@@ -45,16 +41,32 @@
             </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex>
-            <input matInput #filter placeholder="Departamento" formControlName="departamento_id">
+        <mat-form-field appearance="fill">
+            <mat-label>Departamentos</mat-label>
+            <mat-select formControlName="departamento_id">
+                <mat-option *ngFor="let depto of arrayDeptos" [value]="depto.departamento_id">
+                    {{depto.departamento}}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex>
-            <input matInput #filter placeholder="Ciudad" formControlName="ciudad_id">
+        <mat-form-field appearance="fill">
+            <mat-label>Ciudad</mat-label>
+            <mat-select formControlName="ciudad_id">
+                <mat-option *ngFor="let municipio of arrayMunicipios" [value]="municipio.ciudad_id">
+                    {{municipio.ciudad}}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
 
-        <mat-form-field fxFlex>
-            <input matInput #filter placeholder="Tipo Contribuyente" formControlName="tipo_contribuyente">
+        <mat-form-field appearance="fill">
+            <mat-label>Tipo Contribuyente</mat-label>
+            <mat-select formControlName="tipo_contribuyente">
+                <mat-option *ngFor="let contribuyente of arrayContribuyente"
+                    [value]="contribuyente.tipo_contribuyente_id">
+                    {{contribuyente.tipo_contribuyente}}
+                </mat-option>
+            </mat-select>
         </mat-form-field>
 
 

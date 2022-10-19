@@ -83,6 +83,7 @@ export class TercerosPrincipalComponent implements OnInit {
           }
         }, error => console.error(error));
       } else {
+        console.log(res)
         this.servicio.updateTercero(res, res.id).subscribe(result => {
           if (result.cod_resultado === 0) {
             this.getTerceros();

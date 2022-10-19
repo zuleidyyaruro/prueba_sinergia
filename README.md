@@ -14,3 +14,9 @@ DESPLIEGUE LOCAL DEL BACKEND CON DJANGO REST FRAMEWORK
 Cualquier duda quedo a disposición de explicar cualquier duda con el desarrollo del ejercicio.
 
 
+Capturas del ejercicio:
+
+Lista de terceros
+
+Screenshot_339.png
+
