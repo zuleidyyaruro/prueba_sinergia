@@ -9,6 +9,7 @@ import { Tercero } from '../interfaces/terceros.interface';
 export class TercerosService {
 
   private apiUrl: string = 'http://localhost:8000/api/terceros/';
+  private apiUrlView: string = 'http://localhost:8000/api/vista/terceros';
 
   constructor(private http: HttpClient) { }
 
@@ -26,5 +27,9 @@ export class TercerosService {
 
   public deleteTercero(id: number) {
     return this.http.delete<any>(this.apiUrl + id);
+  }
+
+  public viewGetTerceros(): Observable<any[]> {
+    return this.http.get<any[]>(this.apiUrlView);
   }
 }

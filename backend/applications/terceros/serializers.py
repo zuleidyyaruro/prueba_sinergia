@@ -1,7 +1,5 @@
 from rest_framework import serializers
-from rest_flex_fields import FlexFieldsModelSerializer
-
-from applications.terceros.models import Tercero, ElementosListas, TiposListas
+from applications.terceros.models import Tercero, ElementosListas, TiposListas, ViewTercero
 
 
 class TiposListasSerializer(serializers.ModelSerializer):
@@ -20,4 +18,11 @@ class TercerosSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Tercero
+        fields = '__all__'
+
+
+class ViewTercerosSerializer(serializers.ModelSerializer):
+
+    class Meta:
+        model = ViewTercero
         fields = '__all__'

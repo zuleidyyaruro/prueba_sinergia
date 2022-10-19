@@ -19,55 +19,36 @@
 
         <mat-table #table class="datatable" [dataSource]="dataSource" matSort>
 
-            <ng-container matColumnDef="tipo_identificacion_id">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo ID </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.tipo_identificacion_id}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="numero_identificacion">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> N° ID </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.numero_identificacion}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="nombre1">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Primer Nombre </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.nombre1}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="nombre2">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Segundo Nombre </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.nombre2}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="apellido1">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Primer Apellido</mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.apellido1}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="appellido2">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Segundo Apellido</mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.appellido2}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="tipo_tercero_id">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo Tercero </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.tipo_tercero_id}} </mat-cell>
-            </ng-container>
-
-            <ng-container matColumnDef="departamento_id">
+            <ng-container matColumnDef="departamento">
                 <mat-header-cell *matHeaderCellDef mat-sort-header> Departamento </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.departamento_id}} </mat-cell>
+                <mat-cell *matCellDef="let item"> {{item.departamento}} </mat-cell>
             </ng-container>
 
-            <ng-container matColumnDef="ciudad_id">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Ciudad </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.ciudad_id}} </mat-cell>
+            <ng-container matColumnDef="municipio">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Municipio </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.municipio}} </mat-cell>
             </ng-container>
 
-            <ng-container matColumnDef="tipo_contribuyente">
-                <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo Contribuyente </mat-header-cell>
-                <mat-cell *matCellDef="let item"> {{item.tipo_contribuyente}} </mat-cell>
+            <ng-container matColumnDef="tipo_identifacion">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo Identificación </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.tipo_identifacion}} </mat-cell>
             </ng-container>
+
+            <ng-container matColumnDef="identificacion">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Identificación </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.identificacion|number}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="nombres">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Nombre </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.nombres}} </mat-cell>
+            </ng-container>
+
+            <ng-container matColumnDef="tipo_tercero">
+                <mat-header-cell *matHeaderCellDef mat-sort-header> Tipo Tercero </mat-header-cell>
+                <mat-cell *matCellDef="let item"> {{item.tipo_tercero}} </mat-cell>
+            </ng-container>
+
 
             <ng-container matColumnDef="BOTONES">
                 <mat-header-cell *matHeaderCellDef> Acciones disponibles </mat-header-cell>

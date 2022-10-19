@@ -22,7 +22,7 @@ export class TercerosPrincipalComponent implements OnInit {
   public isLoadingResults!: boolean;
   public total = 0;
   public dataSource!: MatTableDataSource<Tercero>;
-  public displayedColumns = ['tipo_identificacion_id', 'numero_identificacion', 'nombre1', 'nombre2', 'apellido1', 'appellido2', 'tipo_tercero_id', 'departamento_id', 'ciudad_id', 'tipo_contribuyente', 'BOTONES'];
+  public displayedColumns = ['departamento', 'municipio', 'tipo_identifacion', 'identificacion', 'nombres', 'tipo_tercero', 'BOTONES'];
 
 
   constructor(private servicio: TercerosService, public dialog: MatDialog, private snackBar: MatSnackBar, private confirmService: AppConfirmService) { }
@@ -38,17 +38,13 @@ export class TercerosPrincipalComponent implements OnInit {
     this.DataTable.columns[3] = new column(this.displayedColumns[3], '');
     this.DataTable.columns[4] = new column(this.displayedColumns[4], '');
     this.DataTable.columns[5] = new column(this.displayedColumns[5], '');
-    this.DataTable.columns[6] = new column(this.displayedColumns[6], '');
-    this.DataTable.columns[7] = new column(this.displayedColumns[7], '');
-    this.DataTable.columns[8] = new column(this.displayedColumns[8], '');
-    this.DataTable.columns[9] = new column(this.displayedColumns[9], '');
 
     this.getTerceros();
   }
 
   getTerceros() {
     // this.isLoadingResults = true;
-    this.servicio.getTerceros().subscribe(result => {
+    this.servicio.viewGetTerceros().subscribe(result => {
       this.dataSource = new MatTableDataSource<Tercero>(result);
       this.isLoadingResults = false;
     }, error => console.error(error));

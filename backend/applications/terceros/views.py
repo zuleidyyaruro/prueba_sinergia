@@ -2,8 +2,8 @@ from rest_framework import viewsets
 from rest_framework.response import Response
 from django.db import transaction
 
-from applications.terceros.models import Tercero, ElementosListas
-from applications.terceros.serializers import TercerosSerializer
+from applications.terceros.models import Tercero, ElementosListas, ViewTercero
+from applications.terceros.serializers import TercerosSerializer, ViewTercerosSerializer
 from shared.enums import ECodigoResultado
 from shared.responses import CRespuestas
 
@@ -55,3 +55,11 @@ class TerceroViewSet(viewsets.ModelViewSet):
         except Exception as e:
             codigo_error = int(ECodigoResultado.ERROR_GENERICO)
             return Response(CRespuestas.generar_respuesta(codigo_error, str(e), None))
+
+
+class ViewTerceroViewSet(viewsets.ReadOnlyModelViewSet):
+    queryset = ViewTercero.objects.all()
+    serializer_class = ViewTercerosSerializer
+
+    def get_queryset(self):
+        return ViewTercero.objects.all()
