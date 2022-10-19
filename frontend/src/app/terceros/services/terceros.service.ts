@@ -15,4 +15,16 @@ export class TercerosService {
   public getTerceros(): Observable<Tercero[]> {
     return this.http.get<Tercero[]>(this.apiUrl);
   }
+
+  public createTercero(modelo: Tercero) {
+    return this.http.post<any>(this.apiUrl, modelo);
+  }
+
+  public updateTercero(modelo: Tercero, id: number) {
+    return this.http.put<any>(this.apiUrl + id + '/', modelo);
+  }
+
+  public deleteTercero(id: number) {
+    return this.http.delete<any>(this.apiUrl + id);
+  }
 }

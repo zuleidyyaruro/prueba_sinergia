@@ -49,10 +49,29 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatCardModule,
     MatInputModule,
     MatProgressSpinnerModule,
-    MatTableModule
+    MatTableModule,
+    MatDialogModule,
+    MatSnackBarModule,
+    MatMenuModule,
+    MatSliderModule,
+    MatSlideToggleModule,
+    MatSidenavModule,
+    MatRadioModule,
+    MatListModule,
+    MatGridListModule,
+    MatDatepickerModule,
+    MatCheckboxModule,
+    MatAutocompleteModule,
+    MatTabsModule,
+    MatButtonToggleModule,
+
   ],
   providers: [
 
+  ],
+  imports: [
+    MatIconModule
   ]
+
 })
 export class SharedMaterialModule { }

@@ -1,0 +1,55 @@
+<h1 mat-dialog-title>{{data.title}}</h1>
+<div mat-dialog-content>
+    <div class="form-vertical" [formGroup]="formGroup">
+
+        <mat-form-field fxFlex>
+            <input matInput #filter placeholder="Tipo de Identifación" formControlName="tipo_identificacion_id">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+            <input matInput #filter placeholder="# Identifación" formControlName="numero_identificacion">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+            <input matInput #filter placeholder="Primer Nombre" formControlName="nombre1">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+            <input matInput #filter placeholder="Segundo Nombre" formControlName="nombre2">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+            <input matInput #filter placeholder="Primer Apellido" formControlName="apellido1">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+            <input matInput #filter placeholder="Segundo Apellido" formControlName="appellido2">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+            <input matInput #filter placeholder="Tipo Tercero" formControlName="tipo_tercero_id">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+            <input matInput #filter placeholder="Departamento" formControlName="departamento_id">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+            <input matInput #filter placeholder="Ciudad" formControlName="ciudad_id">
+        </mat-form-field>
+
+        <mat-form-field fxFlex>
+            <input matInput #filter placeholder="Tipo Contribuyente" formControlName="tipo_contribuyente">
+        </mat-form-field>
+
+
+    </div>
+</div>
+<div mat-dialog-actions class="botones">
+    <button mat-button (click)="dialogRef.close(false)">
+        <mat-icon>arrow_back</mat-icon> Volver
+    </button>
+    <button mat-button color="primary" *ngIf="formGroup.valid" (click)="submit()">
+        <mat-icon>check</mat-icon> Aceptar
+    </button>
+</div>

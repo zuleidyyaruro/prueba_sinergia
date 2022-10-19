@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { TercerosModule } from './terceros/terceros.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms'
+import { SharedMaterialModule } from './terceros/components/shared-material.module';
 
 
 @NgModule({
@@ -17,8 +18,10 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'
     AppRoutingModule,
     TercerosModule,
     BrowserAnimationsModule,
+
     FormsModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    SharedMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]

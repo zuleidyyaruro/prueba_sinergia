@@ -1,4 +1,15 @@
-<div class="table-container ml-05 mr-05 mt-05 pb-1" [@animate]="{value:'*',params:{y:'50px',delay:'300ms'}}">
+<div class="table-container ml-05 mr-05 mt-05 pb-1">
+
+    <div class="header">
+
+        <div class="actions text-center">
+            <button (click)="onPopUpTerceros(null, true)" mat-mini-fab type="button" color="primary"
+                matTooltip="Añadir">
+                <mat-icon>add</mat-icon>
+            </button>
+
+        </div>
+    </div>
 
 
     <div class="mat-elevation-z8">
@@ -61,10 +72,10 @@
             <ng-container matColumnDef="BOTONES">
                 <mat-header-cell *matHeaderCellDef> Acciones disponibles </mat-header-cell>
                 <mat-cell *matCellDef="let item">
-                    <button mat-icon-button color="primary">
+                    <button mat-icon-button color="primary" (click)="onPopUpTerceros(item, false)">
                         <mat-icon class="mat-icon-BOTONES">mode_edit</mat-icon>
                     </button>
-                    <button mat-icon-button color="warn">
+                    <button mat-icon-button color="warn" (click)="onDelete(item)">
                         <mat-icon class="mat-icon-BOTONES">delete_forever</mat-icon>
                     </button>
                 </mat-cell>

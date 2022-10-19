@@ -1,4 +1,5 @@
 export class Tercero {
+    id!: number;
     tipo_identificacion_id!: number;
     numero_identificacion!: string;
     tipo_tercero_id!: number;
