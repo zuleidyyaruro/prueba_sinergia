@@ -16,7 +16,7 @@ Cualquier duda quedo a disposición de explicar cualquier duda con el desarrollo
 
 Capturas del ejercicio:
 
-https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_339.png
+![Image text](https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_339.png)
 
 https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_340.png
 
