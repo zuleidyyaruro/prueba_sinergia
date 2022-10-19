@@ -17,13 +17,8 @@ Cualquier duda quedo a disposición de explicar cualquier duda con el desarrollo
 Capturas del ejercicio:
 
 ![Image text](https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_339.png)
-
-https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_340.png
-
-https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_341.png
-
-https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_342.png
-
-https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_345.png
-
-https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_346.png
+![Image text](https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_340.png)
+![Image text](https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_341.png)
+![Image text](https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_342.png)
+![Image text](https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_345.png)
+![Image text](https://github.com/zuleidyyaruro/prueba_sinergia/blob/main/Screenshot_346.png)
