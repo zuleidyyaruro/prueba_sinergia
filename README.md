@@ -11,7 +11,7 @@ DESPLIEGUE LOCAL DEL BACKEND CON DJANGO REST FRAMEWORK
 6. El puerto donde corre el backend es el 8000
 7. Se deja una copia de la base de datos en el caso de que llegara a fallar algo con las migraciones. Lo ideal sería que se hicieran los pasos anteriores.
 
-Cualquier duda quedo a disposición de explicar cualquier duda con el desarrollo del ejercicio.
+Cualquier duda quedo a disposición de explicar cómo se desarrolló ejercicio.
 
 
 Capturas del ejercicio:
